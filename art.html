@@ -10,34 +10,145 @@
 <body>
     <header>
         <nav>
-            <div class="logo">PORTFOLYO</div>
+            <div class="logo">
+                <a href="index.html">PORTFOLYO</a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./art.html">Art</a></li>
-                <li><a href="./animation.html">Animation</a></li>
-                <li><a href="./games.html">Games</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Pixel Art Section -->
     <section class="grid-showcase">
-        <h2>Art Works</h2>
-        <div class="grid-container">
-            <div class="grid-row">
+        <h2>Pixel Art</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" onclick="scrollSection('pixel-art', -1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="scroll-container" id="pixel-art">
                 <div class="grid-item box-purple">
+                    <img src="path/to/your/image.jpg" alt="Project Image">
                     <div class="grid-overlay">
-                        <h3>Art Project 1</h3>
-                        <p>Description here</p>
+                        <h3>Pixel Character</h3>
+                        <p>8-bit Style</p>
                     </div>
                 </div>
-                <!-- Add more grid items -->
+                <div class="grid-item box-blue">
+                    <div class="grid-overlay">
+                        <h3>Pixel Environment</h3>
+                        <p>Game Background</p>
+                    </div>
+                </div>
+                <div class="grid-item box-green">
+                    <div class="grid-overlay">
+                        <h3>Pixel Items</h3>
+                        <p>Game Assets</p>
+                    </div>
+                </div>
+                <div class="grid-item box-yellow">
+                    <div class="grid-overlay">
+                        <h3>Pixel Animation</h3>
+                        <p>Sprite Sheet</p>
+                    </div>
+                </div>
+                <div class="grid-item box-orange">
+                    <div class="grid-overlay">
+                        <h3>Pixel UI</h3>
+                        <p>Game Interface</p>
+                    </div>
+                </div>
+                <div class="grid-item box-red">
+                    <div class="grid-overlay">
+                        <h3>Pixel Scene</h3>
+                        <p>Full Composition</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="scroll-btn right" onclick="scrollSection('pixel-art', 1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Vector Art Section -->
+    <section class="grid-showcase">
+        <h2>Vector Art</h2>
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-item box-yellow">
+                    <div class="grid-overlay">
+                        <h3>Logo Design</h3>
+                        <p>Brand Identity</p>
+                    </div>
+                </div>
+                <div class="grid-item box-orange">
+                    <div class="grid-overlay">
+                        <h3>Character Design</h3>
+                        <p>Vector Style</p>
+                    </div>
+                </div>
+                <div class="grid-item box-red">
+                    <div class="grid-overlay">
+                        <h3>Icon Set</h3>
+                        <p>UI Elements</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <!-- Your footer content -->
-    </footer>
+    <!-- Concept Art Section -->
+    <section class="grid-showcase">
+        <h2>Concept Art</h2>
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-item box-blue">
+                    <div class="grid-overlay">
+                        <h3>Character Concept</h3>
+                        <p>Game Character</p>
+                    </div>
+                </div>
+                <div class="grid-item box-purple">
+                    <div class="grid-overlay">
+                        <h3>Environment Design</h3>
+                        <p>Game Location</p>
+                    </div>
+                </div>
+                <div class="grid-item box-green">
+                    <div class="grid-overlay">
+                        <h3>Prop Design</h3>
+                        <p>Game Items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Add this modal structure at the bottom of your body tag -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img class="modal-img" src="" alt="">
+        </div>
+    </div>
 </body>
 </html> 

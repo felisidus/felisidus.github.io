@@ -10,33 +10,62 @@
 <body>
     <header>
         <nav>
-            <div class="logo">PORTFOLYO</div>
+            <div class="logo">
+                <a href="index.html">PORTFOLYO</a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./art.html">Art</a></li>
-                <li><a href="./animation.html">Animation</a></li>
-                <li><a href="./games.html">Games</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="grid-showcase">
         <h2>Game Projects</h2>
-        <div class="grid-container">
-            <div class="grid-row">
-                <div class="grid-item box-green">
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" onclick="scrollSection('games-section', -1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="scroll-container" id="games-section">
+                <div class="grid-item box-green" data-color="var(--green)" data-image="images/emberbane.jpg">
+                    <img src="images/emberbane.jpg" alt="Emberbane Game" class="project-image">
                     <div class="grid-overlay">
-                        <h3>Game 1</h3>
-                        <p>Description here</p>
+                        <h3>Emberbane</h3>
+                        <p>Game Artist/Animator</p>
                     </div>
                 </div>
+                <div class="grid-item box-blue" data-color="var(--blue)">
+                    <div class="grid-overlay">
+                        <h3>Alice in Virtual Land</h3>
+                        <p>VR Game</p>
+                    </div>
+                </div>
+                <!-- Add more grid items as needed -->
             </div>
+            
+            <button class="scroll-btn right" onclick="scrollSection('games-section', 1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </section>
 
-    <footer>
-        <!-- Your footer content -->
-    </footer>
+    <!-- Updated Modal -->
+    <div class="project-modal">
+        <div class="modal-content">
+            <div class="modal-box">
+                <img src="" alt="" class="modal-image">
+            </div>
+            <span class="close-button">&times;</span>
+        </div>
+    </div>
+
+    <script src="js/scroll.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html> 
