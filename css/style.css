@@ -1222,4 +1222,120 @@ body.games-page .nav-links li a:hover {
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop styles */
+.grid-showcase {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.grid-showcase h2 {
+    margin: 0;
+    padding: 10px 40px;
+}
+
+.scroll-wrapper {
+    position: relative;
+    margin: 0 40px;
+    max-width: calc(100% - 80px);
+    overflow: hidden;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 30px;
+    padding: 10px 0;
+    cursor: grab;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    scroll-snap-type: x mandatory;
+}
+
+.grid-item {
+    flex: 0 0 300px;
+    min-width: 300px;
+    height: 200px;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .grid-showcase {
+        margin-bottom: 15px;
+    }
+
+    .grid-showcase h2 {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .scroll-wrapper {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .scroll-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px 20px;
+        overflow-x: hidden;
+        cursor: default;
+    }
+
+    .grid-item {
+        flex: none;
+        min-width: 0;
+        width: 100%;
+        height: 180px;
+        border-radius: 12px;
+    }
+
+    .grid-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .grid-overlay h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .grid-overlay p {
+        font-size: 14px;
+    }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .scroll-wrapper {
+        margin: 0 20px;
+        max-width: calc(100% - 40px);
+    }
+
+    .grid-item {
+        flex: 0 0 250px;
+        min-width: 250px;
+        height: 170px;
+    }
+
+    .grid-showcase h2 {
+        padding: 10px 20px;
+    }
+}
+
+/* Hide scrollbar but keep functionality */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 } 
