@@ -969,27 +969,26 @@ body.games-page .nav-links li a:hover {
 
 .scroll-wrapper {
     position: relative;
-    padding: 0;
-    margin: 0 80px;
-    max-width: calc(100% - 160px);
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1400px;
+    width: calc(100% - 80px);
 }
 
 .scroll-container {
     display: flex;
     overflow-x: auto;
-    scroll-behavior: smooth;
     gap: 30px;
-    padding: 20px 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.scroll-container::-webkit-scrollbar {
-    display: none;
+    padding: 10px 0;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    width: 100%;
 }
 
 .grid-item {
     flex: 0 0 300px;
+    min-width: 300px;
     height: 200px;
     position: relative;
 }
