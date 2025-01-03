@@ -11,32 +11,43 @@ body {
     color: #333;
 }
 
-/* Navigation */
+/* Global pink theme */
+:root {
+    --main-pink: #FF69B4;
+    --light-pink: #FFF0F5;
+    --dark-pink: #FF1493;
+}
+
+/* Header theme */
 header {
     position: fixed;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--light-pink);
+    box-shadow: 0 2px 5px rgba(255, 105, 180, 0.1);
     z-index: 1000;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 1rem 5%;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 1rem;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    gap: 2rem;
 }
 
 .nav-links li a {
@@ -47,7 +58,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #007bff;
+    color: var(--main-pink);
 }
 
 /* Hero section */
@@ -139,8 +150,8 @@ button:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--light-pink);
+    color: #333;
     text-align: center;
     padding: 2rem;
 }
@@ -157,7 +168,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: #007bff;
+    color: var(--main-pink);
 }
 
 /* Responsive design */
@@ -168,5 +179,209 @@ footer {
     
     .nav-links {
         display: none;
+    }
+}
+
+.games {
+    padding: 80px 0;
+    background-color: var(--light-pink);
+}
+
+.games h1 {
+    color: #FF69B4;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 5%;
+    margin-top: 40px;
+}
+
+.game-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background-color: var(--light-pink);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+}
+
+.game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 105, 180, 0.9), rgba(255, 105, 180, 0.4));
+    padding: 20px;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-overlay {
+    transform: translateY(0);
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+.game-overlay h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+}
+
+.game-overlay p {
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.view-more {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--main-pink);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-more:hover {
+    background-color: var(--dark-pink);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Art Gallery Styles */
+.art-gallery {
+    padding: 120px 0 80px;
+    background-color: var(--light-pink);
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.art-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--light-pink);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+}
+
+/* Animation Projects Styles */
+.animation-projects {
+    padding: 120px 0 80px;
+    background-color: var(--light-pink);
+}
+
+.animation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 5%;
+}
+
+.animation-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.animation-card video {
+    width: 100%;
+    display: block;
+}
+
+.animation-details {
+    padding: 20px;
+}
+
+/* Responsive Design for new sections */
+@media (max-width: 1024px) {
+    .art-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .animation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Page Headers */
+section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--main-pink);
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Pink theme for games page header */
+body.games-page header {
+    background-color: var(--light-pink);
+}
+
+body.games-page .nav-links li a:hover {
+    color: var(--main-pink);
+}
+
+/* Add padding to sections to account for fixed header */
+.games, .art-gallery, .animation-projects {
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .games, .art-gallery, .animation-projects {
+        padding-top: 180px;
     }
 } 
