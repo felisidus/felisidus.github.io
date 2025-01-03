@@ -10,51 +10,65 @@
 <body>
     <header>
         <nav>
-            <div class="logo">PORTFOLYO</div>
+            <div class="logo">
+                <a href="index.html">PORTFOLYO</a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links">
-                <li><a href="./art.html">Art</a></li>
-                <li><a href="./animation.html">Animation</a></li>
-                <li><a href="./games.html">Games</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="games.html">Games</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Timeless Innovative Creations</h1>
-            <p>Explore how we craft unique web experiences that bring your vision to life and captivate audiences.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-        </div>
-    </section>
-
-    <section class="capabilities">
-        <h2>Our Capabilities</h2>
-        <p class="section-subtitle">Sculpting unique concepts that bring about transformative success.</p>
-        <div class="capabilities-grid">
-            <div class="capability-card">
-                <h3>Creativity</h3>
-                <p>Duis cursus, mi quis viverra ornares dolor interdum Nunc ut sem vitae risus posuere.</p>
+    <section class="grid-showcase">
+        <h2>Featured Works</h2>
+        <div class="grid-container">
+            <!-- First Row -->
+            <div class="grid-row">
+                <div class="grid-item box-purple">
+                    <div class="grid-overlay">
+                        <h3>Project 1</h3>
+                        <p>Description here</p>
+                    </div>
+                </div>
+                <div class="grid-item box-blue">
+                    <div class="grid-overlay">
+                        <h3>Project 2</h3>
+                        <p>Description here</p>
+                    </div>
+                </div>
+                <div class="grid-item box-green">
+                    <div class="grid-overlay">
+                        <h3>Project 3</h3>
+                        <p>Description here</p>
+                    </div>
+                </div>
             </div>
-            <div class="capability-card">
-                <h3>Growth</h3>
-                <p>Duis cursus, mi quis viverra ornares dolor interdum Nunc ut sem vitae risus posuere.</p>
-            </div>
-            <div class="capability-card">
-                <h3>Solutions</h3>
-                <p>Duis cursus, mi quis viverra ornares dolor interdum Nunc ut sem vitae risus posuere.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="art" class="works">
-        <h2>Featured Art</h2>
-        <div class="works-grid">
-            <div class="work-card">
-                <img src="path-to-image" alt="Lucid Stream">
-                <div class="work-overlay">
-                    <h3>Lucid Stream</h3>
-                    <a href="#" class="view-more">View More</a>
+            
+            <!-- Second Row -->
+            <div class="grid-row">
+                <div class="grid-item box-yellow">
+                    <div class="grid-overlay">
+                        <h3>Project 4</h3>
+                        <p>Description here</p>
+                    </div>
+                </div>
+                <div class="grid-item box-orange">
+                    <div class="grid-overlay">
+                        <h3>Project 5</h3>
+                        <p>Description here</p>
+                    </div>
+                </div>
+                <div class="grid-item box-red">
+                    <div class="grid-overlay">
+                        <h3>Project 6</h3>
+                        <p>Description here</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,13 +89,23 @@
         <div class="footer-bottom">
             <div class="logo">Your Name</div>
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/aysegul-gecinir/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/felislucidus/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@felisidus" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.behance.net/felislucidus" target="_blank"><i class="fab fa-behance"></i></a>
+                <a href="https://www.artstation.com/felislucidus" target="_blank"><i class="fab fa-artstation"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 </body>
 </html> 
